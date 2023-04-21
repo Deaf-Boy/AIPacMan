@@ -44,4 +44,18 @@ public class GM_PackMan : MonoBehaviour
         this.score = score;
         Score.text = score.ToString().PadLeft(2, '0'); 
     }
+
+    public void pelleteaten(Pellet pellet)
+    {
+        pellet.gameObject.SetActive(false);
+
+        Setscore(score + pellet.points);
+    }
+
+    public void super_pelleteaten(Super_Pellet pellet)
+    {
+        pellet.gameObject.SetActive(false);
+
+        Setscore(score + pellet.points);
+    }
 }
